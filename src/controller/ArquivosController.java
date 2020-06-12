@@ -22,7 +22,6 @@ public class ArquivosController implements IArquivosController {
 		File dir = new File(path);
 		File arq = new File(path, nome+ ".csv");		
 		if (dir.exists() && dir.isDirectory()) {		
-			//String conteudo = dado;
 			FileWriter fileWriter = new FileWriter(arq);
 			PrintWriter print = new PrintWriter(fileWriter);
 			print.write(dado);
@@ -43,7 +42,7 @@ public class ArquivosController implements IArquivosController {
 			BufferedReader buffer = new BufferedReader(leitor);
 			String linha = buffer.readLine();
 			String linhaC = linha + "\r\n";
-			while (linha != null) { // procurando EOF
+			while (linha != null) {
 				linha = buffer.readLine();
 				if (linha != null) {
 					linhaC = linhaC + linha.replace(" ", ";") + "\r\n";

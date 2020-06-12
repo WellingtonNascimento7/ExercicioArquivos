@@ -11,15 +11,11 @@ public class Principal {
 
 		IArquivosController arqCont = new ArquivosController();
 		String path = new File("").getAbsolutePath() + "\\Relatorio";
-		//String path = "C:\\TEMP\\aula";
 		String nome = "relatorio";
-		try {
-			//arqCont.readDir(dirWin);
-			//arqCont.createFile(path, nome);
+		try {		
 			arqCont.convertFile(path, nome);
 			arqCont.openFile(path, nome);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
